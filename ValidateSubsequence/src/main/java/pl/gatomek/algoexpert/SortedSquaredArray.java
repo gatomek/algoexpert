@@ -11,6 +11,10 @@ public class SortedSquaredArray {
         int len = array.length;
 
         int[] absArray = new int[len];
+        if (len == 0) {
+            return absArray;
+        }
+
         for (int i = 0; i < len; i++) {
             absArray[i] = Math.abs(array[i]);
         }
