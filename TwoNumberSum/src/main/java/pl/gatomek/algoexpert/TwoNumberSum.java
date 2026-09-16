@@ -10,7 +10,7 @@ public class TwoNumberSum {
         int sum = 10;
 
         int[] result = twoNumberSum(test, sum);
-        Arrays.stream(result).asLongStream().forEach( IO::println);
+        Arrays.stream(result).forEach( IO::println);
     }
 
     public static int[] twoNumberSum(int[] array, int targetSum) {
