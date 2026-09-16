@@ -1,6 +1,7 @@
 package pl.gatomek.algoexpert;
 
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ValidateSubsequence {
@@ -9,6 +10,10 @@ public class ValidateSubsequence {
     public static boolean isValidSubsequence(List<Integer> array, List<Integer> sequence) {
         int is = 0;
         int sLen = sequence.size();
+
+        if( sLen == 0) {
+            return true;
+        }
 
         for (Integer va : array) {
             Integer vs = sequence.get(is);
@@ -30,6 +35,6 @@ public class ValidateSubsequence {
         List<Integer> sequence = List.of(1, 6, -1, 10);
 
         boolean vld = isValidSubsequence(array, sequence);
-        logger.info("" + vld);
+        logger.log(Level.INFO, "{0}", vld);
     }
 }

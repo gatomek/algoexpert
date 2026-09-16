@@ -29,6 +29,6 @@ public class TwoNumberSum {
         int sum = 10;
 
         int[] result = twoNumberSum(test, sum);
-        Arrays.stream(result).forEach(s -> logger.log(Level.INFO, "{}", s));
+        Arrays.stream(result).forEach(s -> logger.log(Level.INFO, "{0}", s));
     }
 }
