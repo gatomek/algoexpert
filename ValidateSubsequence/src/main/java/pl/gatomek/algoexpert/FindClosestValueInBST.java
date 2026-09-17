@@ -1,6 +1,6 @@
 package pl.gatomek.algoexpert;
 
-public class FindClosestValueInBST {
+class FindClosestValueInBST {
     static int findClosestValueInBst(BST tree, int target) {
         final int currValue = tree.value;
         if (currValue == target) {
