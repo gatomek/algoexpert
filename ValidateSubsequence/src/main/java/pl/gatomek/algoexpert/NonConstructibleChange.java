@@ -23,9 +23,12 @@ class NonConstructibleChange {
                 return true;
             }
 
-            boolean result = tryCollectSum(i + 1, end, coins, targetSum - coin);
-            if (result) {
-                return true;
+            final int missingValue = targetSum - coin;
+            if (missingValue > 0) {
+                boolean result = tryCollectSum(i + 1, end, coins, missingValue);
+                if (result) {
+                    return true;
+                }
             }
         }
 
