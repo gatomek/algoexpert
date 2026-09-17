@@ -19,16 +19,17 @@ class NonConstructibleChange {
         for (int i = start; i < end; i++) {
             final int coin = coins[i];
 
+            if (coin > targetSum) {
+                continue;
+            }
+
             if (coin == targetSum) {
                 return true;
             }
 
-            final int missingValue = targetSum - coin;
-            if (missingValue > 0) {
-                boolean result = tryCollectSum(i + 1, end, coins, missingValue);
-                if (result) {
-                    return true;
-                }
+            boolean result = tryCollectSum(i + 1, end, coins, targetSum - coin);
+            if (result) {
+                return true;
             }
         }
 
