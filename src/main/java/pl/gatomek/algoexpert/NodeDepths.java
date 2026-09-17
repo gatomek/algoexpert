@@ -19,7 +19,6 @@ public class NodeDepths {
         return currentLevel;
     }
 
-
     static class BinaryTree {
         int value;
         BinaryTree left;
