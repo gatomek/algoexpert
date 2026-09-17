@@ -2,13 +2,15 @@ package pl.gatomek.algoexpert;
 
 import java.util.Arrays;
 
-public class SortedSquaredArray {
-    public static int[] sortedSquaredArray(int[] array) {
+// todo: performance comparison tests with JMH
+
+class SortedSquaredArray {
+    private static int[] sortedSquaredArray(int[] array) {
         return Arrays.stream(array).map(n -> n * n).sorted().toArray();
     }
 
     public static int[] sortedSquaredArray2(int[] array) {
-        int len = array.length;
+        final int len = array.length;
 
         int[] absArray = new int[len];
         if (len == 0) {
@@ -64,6 +66,10 @@ public class SortedSquaredArray {
             int rValue = absArray[rightIndex];
             target[targetIndex++] = rValue;
             rightIndex++;
+        }
+
+        if(targetIndex != len) {
+            throw new IllegalStateException("target index with array length mismatch");
         }
 
         for (int i = 0; i < len; i++) {

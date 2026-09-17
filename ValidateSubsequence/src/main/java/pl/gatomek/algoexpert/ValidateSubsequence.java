@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ValidateSubsequence {
+class ValidateSubsequence {
     private static final Logger logger = Logger.getLogger(ValidateSubsequence.class.getName());
 
     public static boolean isValidSubsequence(List<Integer> array, List<Integer> sequence) {
