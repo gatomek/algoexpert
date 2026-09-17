@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class TwoNumberSum {
+class TwoNumberSum {
     private static final Logger logger = Logger.getLogger(TwoNumberSum.class.getName());
 
     public static int[] twoNumberSum(int[] array, int targetSum) {

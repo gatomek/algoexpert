@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 class NonConstructibleChange {
     public static int nonConstructibleChange(int[] coins) {
-        final int sumRange = Arrays.stream(coins).sum() + 1;
+        final int sumRange = Arrays.stream(coins).sum();
         int sum = 1;
-        for (; sum < sumRange; sum++) {
+        for (; sum <= sumRange; sum++) {
             boolean success = tryCollectSum(0, coins.length, coins, sum);
             if (!success) {
                 return sum;
