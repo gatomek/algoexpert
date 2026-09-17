@@ -3,24 +3,22 @@ package pl.gatomek.algoexpert;
 public class FindClosestValueInBST {
     static int findClosestValueInBst(BST tree, int target) {
         final int currValue = tree.value;
-        if( currValue == target) {
+        if (currValue == target) {
             return currValue;
         }
 
-        if( target < currValue) {
-            if( tree.left != null) {
-                final int candidate = findClosestValueInBst( tree.left, target);
+        if (target < currValue) {
+            if (tree.left != null) {
+                final int candidate = findClosestValueInBst(tree.left, target);
                 int currDelta = Math.abs(target - currValue);
                 int candDelta = Math.abs(target - candidate);
                 return currDelta < candDelta ? currValue : candidate;
-            }
-            else {
+            } else {
                 return currValue;
             }
-        }
-        else {
-            if( tree.right != null) {
-                final int candidate = findClosestValueInBst( tree.right, target);
+        } else {
+            if (tree.right != null) {
+                final int candidate = findClosestValueInBst(tree.right, target);
                 int currDelta = Math.abs(target - currValue);
                 int candDelta = Math.abs(target - candidate);
                 return currDelta < candDelta ? currValue : candidate;
