@@ -1,5 +1,7 @@
 package pl.gatomek.algoexpert;
 
+//todo: algo without recurrency?
+
 public class EvaluateExpressionTree {
     static class BinaryTree {
         public int value;
@@ -26,7 +28,7 @@ public class EvaluateExpressionTree {
                 case -2 -> a-b;
                 case -3 -> a/b;
                 case -4 -> a*b;
-                default -> throw new IllegalStateException("unknown operator");
+                default -> throw new IllegalStateException("Unknown Operator");
             };
         }
         else {
