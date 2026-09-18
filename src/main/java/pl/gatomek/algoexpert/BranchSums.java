@@ -6,10 +6,10 @@ import java.util.List;
 public class BranchSums {
 
     public static List<Integer> branchSums(BinaryTree root) {
-        return preOrderTraverse(root);
+        return postOrderTraverse(root);
     }
 
-    private static List<Integer> preOrderTraverse(BinaryTree tree) {
+    private static List<Integer> postOrderTraverse(BinaryTree tree) {
         if (tree.left == null && tree.right == null) {
             return List.of(tree.value);
         }
@@ -17,19 +17,16 @@ public class BranchSums {
         List<Integer> collector = new ArrayList<>();
 
         if (tree.left != null) {
-            List<Integer> leftList = preOrderTraverse(tree.left);
+            List<Integer> leftList = postOrderTraverse(tree.left);
             collector.addAll(leftList);
         }
 
         if (tree.right != null) {
-            List<Integer> rightList = preOrderTraverse(tree.right);
+            List<Integer> rightList = postOrderTraverse(tree.right);
             collector.addAll(rightList);
         }
 
-        for (int i = 0; i < collector.size(); i++) {
-            collector.set(i, collector.get(i) + tree.value);
-        }
-
+        collector.replaceAll(integer -> integer + tree.value);
         return collector;
     }
 
