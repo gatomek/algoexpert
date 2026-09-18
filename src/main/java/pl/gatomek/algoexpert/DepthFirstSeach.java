@@ -3,6 +3,8 @@ package pl.gatomek.algoexpert;
 import java.util.ArrayList;
 import java.util.List;
 
+// todo: add non-recursive method
+
 public class DepthFirstSeach {
     static class Node {
         String name;
