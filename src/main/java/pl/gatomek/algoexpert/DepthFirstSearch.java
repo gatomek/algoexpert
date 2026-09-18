@@ -5,7 +5,7 @@ import java.util.List;
 
 // todo: add non-recursive method
 
-public class DepthFirstSeach {
+public class DepthFirstSearch {
     static class Node {
         String name;
         List<Node> children = new ArrayList<>();
@@ -18,7 +18,7 @@ public class DepthFirstSeach {
             array.add(name);
 
             for (Node n : children) {
-                array = n.depthFirstSearch(array);
+                n.depthFirstSearch(array);
             }
 
             return array;
