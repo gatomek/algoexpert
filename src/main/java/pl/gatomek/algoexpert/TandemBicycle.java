@@ -3,7 +3,7 @@ package pl.gatomek.algoexpert;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class TamdemBicycle {
+public class TandemBicycle {
     public int tandemBicycle(
             int[] redShirtSpeeds, int[] blueShirtSpeeds, boolean fastest
     ) {
