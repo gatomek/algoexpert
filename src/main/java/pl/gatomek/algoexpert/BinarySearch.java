@@ -1,6 +1,9 @@
 package pl.gatomek.algoexpert;
 
 public class BinarySearch {
+    private BinarySearch() {
+    }
+
     public static int binarySearch(int[] array, int target) {
         return binary(array, 0, array.length, target);
     }
