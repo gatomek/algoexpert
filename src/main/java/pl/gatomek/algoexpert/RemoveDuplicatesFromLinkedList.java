@@ -1,7 +1,7 @@
 package pl.gatomek.algoexpert;
 
 public class RemoveDuplicatesFromLinkedList {
-    public void stepOver(LinkedList currentNode) {
+    private void stepOver(LinkedList currentNode) {
         LinkedList nextNode = currentNode.next;
         if (nextNode == null) {
             return;
