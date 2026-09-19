@@ -21,6 +21,6 @@ public class BinarySearch {
             return binary(array, start, middle, target);
         }
 
-        return binary(array, middle+1, end, target);
+        return binary(array, middle + 1, end, target);
     }
 }
