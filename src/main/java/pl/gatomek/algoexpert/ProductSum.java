@@ -3,6 +3,10 @@ package pl.gatomek.algoexpert;
 import java.util.List;
 
 public class ProductSum {
+
+    private ProductSum(){
+    }
+
     private static int calcSum(List<Object> array, int level) {
         int sum = 0;
         for (Object o : array) {
