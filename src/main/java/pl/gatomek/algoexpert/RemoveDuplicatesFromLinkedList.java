@@ -19,11 +19,34 @@ public class RemoveDuplicatesFromLinkedList {
         }
     }
 
-    public LinkedList removeDuplicatesFromLinkedList(LinkedList linkedList) {
+    public LinkedList removeDuplicatesFromLinkedListRecursive(LinkedList linkedList) {
         stepOver(linkedList);
         return linkedList;
     }
 
+    public LinkedList removeDuplicatesFromLinkedList(LinkedList linkedList) {
+        LinkedList currentNode = linkedList;
+        while (currentNode != null) {
+
+            LinkedList nextNode = currentNode.next;
+            if (nextNode == null) {
+                break;
+            }
+
+            int currentValue = currentNode.value;
+            int nextValue = nextNode.value;
+
+            if (currentValue != nextValue) {
+                currentNode = nextNode;
+            }
+            else {
+                currentNode.next = nextNode.next;
+                nextNode.next = null;
+            }
+        }
+
+        return linkedList;
+    }
     public static class LinkedList {
         public int value;
         public LinkedList next;
