@@ -1,5 +1,7 @@
 package pl.gatomek.algoexpert;
 
+// todo: performance comparison of recursive and non-recursive methods
+
 public class RemoveDuplicatesFromLinkedList {
     private void stepOver(LinkedList currentNode) {
         LinkedList nextNode = currentNode.next;
