@@ -10,7 +10,7 @@ public class BinarySearch {
             return -1;
         }
 
-        int middle = (start + end) / 2;
+        int middle = start + (end - start) / 2;
         int middleValue = array[middle];
 
         if (middleValue == target) {
