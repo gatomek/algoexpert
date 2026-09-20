@@ -1,10 +1,18 @@
 package pl.gatomek.algoexpert;
 
 // todo: add priority queue with list implementation
+// todo: collect only three max value list via single pass O(n)
 // todo: make performance comparison with JMH
 
 public class FindThreeLargestNumbers {
     public static int[] findThreeLargestNumbers(int[] array) {
+        // time complexity: O(n*log(n))
+        // mem complexity: 1
+
+        if (array == null || array.length < 3) {
+            throw new IllegalArgumentException("Array must contain at least 3 elements");
+        }
+
         int len = array.length;
         for (int i = 1; i < len; i++) {
             tryMoveUp(i, array);
